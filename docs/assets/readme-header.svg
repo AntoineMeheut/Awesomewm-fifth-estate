@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="300" viewBox="0 0 1280 300" role="img" aria-labelledby="title desc">
+  <title id="title">Retro Awesome</title>
+  <desc id="desc">Bannière vert sur noir inspirée de la maquette : typographie monospace, bordures fines et barre de session. Cinq terminaux pour le ThinkPad T430.</desc>
+  <rect width="1280" height="300" fill="#020805"/>
+  <g font-family="DejaVu Sans Mono, Menlo, Consolas, monospace">
+    <path d="M16 48H1264" stroke="#285b3b" stroke-width="2"/>
+    <rect x="16" y="12" width="148" height="27" fill="#80e89a"/>
+    <text x="30" y="32" font-size="20" font-weight="700" fill="#020805">0:readme</text>
+    <text x="188" y="32" font-size="19" fill="#80e89a">1:desk   2:setup   3:keys</text>
+    <text x="1250" y="32" font-size="18" text-anchor="end" fill="#519565">AWESOMEWM / X11</text>
+    <rect x="16" y="62" width="868" height="181" fill="none" stroke="#a5ffb9" stroke-width="2"/>
+    <text x="44" y="139" font-size="77" font-weight="700" letter-spacing="-3" fill="#a5ffb9">RETRO AWESOME</text>
+    <text x="48" y="183" font-size="24" fill="#80e89a">Cinq terminaux. Un bureau. Tout au clavier.</text>
+    <text x="48" y="220" font-size="18" fill="#519565">MASTUI / BBS / IRSSI / RANGER / HTOP</text>
+    <rect x="896" y="62" width="368" height="181" fill="none" stroke="#285b3b" stroke-width="2"/>
+    <text x="919" y="92" font-size="18" font-weight="700" fill="#80e89a">SESSION / RETRO</text>
+    <path d="M910 105H1250" stroke="#285b3b"/>
+    <text x="919" y="138" font-size="18" fill="#519565">CIBLE</text>
+    <text x="1240" y="138" font-size="19" text-anchor="end" fill="#80e89a">Linux Mint 22.3</text>
+    <text x="919" y="178" font-size="18" fill="#519565">MACHINE</text>
+    <text x="1240" y="178" font-size="19" text-anchor="end" fill="#80e89a">ThinkPad T430</text>
+    <text x="919" y="218" font-size="18" fill="#519565">LICENCE</text>
+    <text x="1240" y="218" font-size="19" text-anchor="end" fill="#80e89a">MIT</text>
+    <path d="M16 258H1264" stroke="#285b3b" stroke-width="2"/>
+    <text x="20" y="283" font-size="18" fill="#519565">retro@awesome:~$</text>
+    <text x="213" y="283" font-size="18" fill="#80e89a">Bienvenue dans votre prochain bureau.</text>
+    <rect x="640" y="267" width="10" height="19" fill="#a5ffb9"/>
+  </g>
+</svg>

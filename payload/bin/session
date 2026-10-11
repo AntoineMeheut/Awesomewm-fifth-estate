@@ -1,0 +1,33 @@
+#!/bin/sh
+set -eu
+umask 077
+RETRO_DATA="${XDG_DATA_HOME:-$HOME/.local/share}/retro-awesome"
+RETRO_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/retro-awesome"
+export XDG_CURRENT_DESKTOP=Awesome
+export XDG_SESSION_DESKTOP=retro-awesome
+export XDG_SESSION_TYPE=x11
+export PATH="$RETRO_DATA/bin:$RETRO_DATA/pipx-bin:$HOME/.local/bin:$PATH"
+"$RETRO_DATA/bin/retro" prepare
+# APT fournit D-Bus ; le gestionnaire de connexion peut déjà l'avoir démarré.
+if [ -z "${DBUS_SESSION_BUS_ADDRESS:-}" ]; then
+    exec dbus-run-session -- "$RETRO_DATA/bin/session"
+fi
+# Le rechargement d'Awesome ne repasse jamais par ce lanceur de session.
+xset s 600 600
+xss-lock --transfer-sleep-lock -- "$RETRO_DATA/bin/lock" &
+RETRO_LOCK_PID=$!
+nm-applet &
+RETRO_NETWORK_PID=$!
+xfsettingsd --no-daemon &
+RETRO_SETTINGS_PID=$!
+xfce4-power-manager --no-daemon &
+RETRO_POWER_PID=$!
+if [ -x /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 ]; then
+    /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+    RETRO_POLKIT_PID=$!
+fi
+cleanup() {
+    kill "$RETRO_LOCK_PID" "$RETRO_NETWORK_PID" "$RETRO_SETTINGS_PID" "$RETRO_POWER_PID" ${RETRO_POLKIT_PID:+"$RETRO_POLKIT_PID"} 2>/dev/null || true
+}
+trap cleanup EXIT HUP INT TERM
+awesome -c "$RETRO_CONFIG/awesome/rc.lua"

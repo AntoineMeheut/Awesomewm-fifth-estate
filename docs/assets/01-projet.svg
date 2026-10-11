@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="64" viewBox="0 0 840 64" role="img" aria-labelledby="title">
+  <title id="title">Le projet</title>
+  <rect width="840" height="64" fill="#020805"/>
+  <rect x="1" y="1" width="838" height="62" fill="none" stroke="#285b3b" stroke-width="2"/>
+  <rect x="12" y="12" width="52" height="40" fill="#80e89a"/>
+  <g font-family="DejaVu Sans Mono, Menlo, Consolas, monospace" font-size="26">
+    <text x="38" y="41" text-anchor="middle" font-weight="700" fill="#020805">01</text>
+    <text x="84" y="41" fill="#a5ffb9">LE PROJET</text>
+    <rect x="810" y="21" width="10" height="22" fill="#519565"/>
+  </g>
+</svg>

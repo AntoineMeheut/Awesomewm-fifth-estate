@@ -1,0 +1,18 @@
+# Les abstractions absentes utilisent celles du thème par défaut d'Irssi.
+default_color = "2";
+info_eol = "false";
+replaces = { };
+abstracts = {
+  line_start = "%g»%n ";
+  timestamp = "%g$*%n";
+  hilight = "%G$*%n";
+  error = "%YERREUR : $*%n";
+  channel = "%G$*%n";
+  nick = "%G$*%n";
+  server = "%g$*%n";
+  comment = "%g$*%n";
+  sb_background = "%2%k";
+  sb = "%2%k$*%n";
+  sbstart = "%2%k";
+  sbend = "%n";
+};
